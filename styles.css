@@ -14,16 +14,16 @@ body {
 }
 
 .all-content {
-        padding-bottom: 50px;
+    padding-bottom: 50px;
 }
 
 .header {
     margin-bottom: 74px;
-  font-size: 32px;  
-  text-align: center;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  padding: 24px;
-  padding-bottom: 74px;
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 24px;
+    padding-bottom: 74px;
 }
 
 .header h1 {
@@ -57,14 +57,12 @@ body {
     scroll-margin-top: 48px;
 }
 
-/* Keyframes for target highlight animation */
 @keyframes target-highlight {
     0% { transform: scale(1); }
     50% { transform: scale(1.05); }
     100% { transform: scale(1); }
 }
 
-/* Apply animation when section is targeted via navigation */
 #about:target .about,
 #contact:target {
     animation: target-highlight 1s ease-in-out;
@@ -119,7 +117,6 @@ body {
     max-width: 600px;
 }
 
-
 .contact-list {
     display: inline-block;
     text-align: left;
@@ -162,17 +159,18 @@ body {
         max-width: 300px;
         box-sizing: border-box;
     }
-    
+
     .header {
         margin-bottom: 40px;
         padding-bottom: 54px;
     }
-    
+
     .contact {
         margin-top: 50px;
     }
-    
-    .about-description, .contact-description {
+
+    .about-description, 
+    .contact-description {
         padding: 0 16px;
     }
 }
