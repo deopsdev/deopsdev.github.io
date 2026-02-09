@@ -14,9 +14,6 @@
                 <h1>Deops <br> Dev</h1>
                 <nav class="nav">
                     <a href="#about">About</a>
-                    <!--
-                    <a href="">Project</a>
-                -->
                     <a href="#contact">Contact</a>
                 </nav>
             </div>
@@ -34,15 +31,6 @@
                 </ul>
             </div>
         </section>
-        <!---
-        <section>
-            <div>
-                <h2>Project</h2>
-                <p>
-                </p>
-            </div>
-        </section>
-    -->
         <footer>
             <div id="contact" class="contact">
                 <h2 class="contact-title">Contact</h2>
@@ -61,6 +49,15 @@
                 const element = document.getElementById('scaler');
                 if (element) {
                     const width = window.innerWidth;
+                    
+                    if (width <= 600) {
+                        element.style.transform = 'none';
+                        element.style.width = '100%'; 
+                        document.body.style.height = 'auto'; 
+                        return; 
+                    }
+
+                    element.style.width = '800px'; 
                     const scale = width / 800;
                     element.style.transform = `scale(${scale})`;
                     document.body.style.height = (element.getBoundingClientRect().height) + 'px';
