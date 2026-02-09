@@ -1,0 +1,132 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#scaler {
+    width: 800px;
+    transform-origin: top left;
+}
+
+.all-content {
+        padding-bottom: 50px;
+}
+
+.header {
+    margin-bottom: 74px;
+  font-size: 32px;  
+  text-align: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 24px;
+  padding-bottom: 74px;
+}
+
+.header h1 {
+    margin-bottom: 0;
+}
+
+.nav {
+    padding-top: 50px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
+
+.nav a {
+    background-color: black;
+    padding: 12px 24px;
+    text-decoration: none;
+    color: white;
+    border: 2px solid black; /* Menambahkan border transparan atau sama dengan background awal agar ukuran tidak lompat */
+    transition: all 0.3s ease; /* Efek transisi halus */
+}
+
+.nav a:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+/* About Section */
+#about {
+    scroll-margin-top: 24px;
+}
+
+.about {
+    text-align: center;}
+
+.about-title {
+    font-size: 24px;
+}
+
+.about-description {
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 48px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-list {
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 24px 48px;
+    margin: 0 auto;
+    width: fit-content;
+    list-style-type: none;
+}
+
+.about-list li {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+/* Contact Section */
+#contact {
+    scroll-margin-top: 24px;
+}
+
+.contact {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 24px;
+}
+
+.contact-description {
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.contact-list {
+    display: inline-block;
+    text-align: left;
+    margin: 48px auto 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-list a {
+    background-color: black;
+    padding: 12px 24px;
+    text-decoration: none;
+    color: white;
+    border: 2px solid black;
+    transition: background-color 0.3s ease;
+}
+
+.contact-list a:hover {
+    background-color: #004494;
+    border: 2px solid black;
+}

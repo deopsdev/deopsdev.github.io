@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Deops Dev</title>
+    </head>
+    <body>
+        <div id="scaler">
+        <div class="all-content">
+        <header>
+            <div class="header">
+                <h1>Deops <br> Dev</h1>
+                <nav class="nav">
+                    <a href="#about">About</a>
+                    <!--
+                    <a href="">Project</a>
+                -->
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <section id="about">
+            <div class="about">
+                <h2 class="about-title">About</h2>
+                <p class="about-description">
+                 "Hi, I'm Anjab, the creator of deops.dev. I am a HTML & CSS developer currently on the path to becoming a professional Front-End Developer."
+                </p>
+                <h3 class="skills">Skills</h3>
+                <ul class="about-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+            </div>
+        </section>
+        <!---
+        <section>
+            <div>
+                <h2>Project</h2>
+                <p>
+                </p>
+            </div>
+        </section>
+    -->
+        <footer>
+            <div id="contact" class="contact">
+                <h2 class="contact-title">Contact</h2>
+                <p class="contact-description">
+                    "I’m always interested in hearing about new projects and innovative ideas. Whether you have a specific question or just want to say hi, feel free to reach out!"
+                </p>
+                <ul class="contact-list">
+                   <li><a href="mailto:deops.dev@gmail.com">Email: deops.dev@gmail.com</a></li>
+                </ul>
+            </div>
+        </footer>
+        </div>
+        </div>
+        <script>
+            function scaleContent() {
+                const element = document.getElementById('scaler');
+                if (element) {
+                    const width = window.innerWidth;
+                    const scale = width / 800;
+                    element.style.transform = `scale(${scale})`;
+                    document.body.style.height = (element.getBoundingClientRect().height) + 'px';
+                }
+            }
+
+            window.addEventListener('resize', scaleContent);
+            window.addEventListener('load', scaleContent);
+            scaleContent();
+        </script>
+    </body>
+</html>
