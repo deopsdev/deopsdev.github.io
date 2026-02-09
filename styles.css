@@ -88,31 +88,6 @@ body {
     margin-bottom: 0;
 }
 
-@media screen and (max-width: 600px) {
-    .nav {
-        gap: 20px;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about-list {
-        flex-direction: column;
-        gap: 12px;
-    }
-    
-    .header {
-        margin-bottom: 40px;
-        padding-bottom: 24px;
-    }
-    
-    .contact {
-        margin-top: 50px;
-    }
-}
-#contact {
-    scroll-margin-top: 24px;
-}
-
 .contact {
     margin-top: 100px;
     text-align: center;
