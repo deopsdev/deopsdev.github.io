@@ -57,8 +57,23 @@ body {
     scroll-margin-top: 48px;
 }
 
+/* Keyframes for target highlight animation */
+@keyframes target-highlight {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Apply animation when section is targeted via navigation */
+#about:target .about,
+#contact:target {
+    animation: target-highlight 1s ease-in-out;
+}
+
 .about {
-    text-align: center;}
+    text-align: center;
+    transition: transform 0.3s ease;
+}
 
 .about-title {
     font-size: 24px;
@@ -91,6 +106,7 @@ body {
 .contact {
     margin-top: 100px;
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .contact-title {
@@ -102,6 +118,7 @@ body {
     margin: 0 auto;
     max-width: 600px;
 }
+
 
 .contact-list {
     display: inline-block;
@@ -123,4 +140,39 @@ body {
 .contact-list a:hover {
     background-color: #004494;
     border: 2px solid black;
+}
+
+@media screen and (max-width: 600px) {
+    #scaler {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .nav {
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-list {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        max-width: 300px;
+        box-sizing: border-box;
+    }
+    
+    .header {
+        margin-bottom: 40px;
+        padding-bottom: 54px;
+    }
+    
+    .contact {
+        margin-top: 50px;
+    }
+    
+    .about-description, .contact-description {
+        padding: 0 16px;
+    }
 }
