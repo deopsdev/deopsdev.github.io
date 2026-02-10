@@ -57,6 +57,10 @@ body {
     scroll-margin-top: 48px;
 }
 
+#projects {
+    scroll-margin-top: 48px;
+}
+
 @keyframes target-highlight {
     0% { transform: scale(1); }
     50% { transform: scale(1.05); }
@@ -64,6 +68,7 @@ body {
 }
 
 #about:target .about,
+#projects:target .projects,
 #contact:target {
     animation: target-highlight 1s ease-in-out;
 }
@@ -99,6 +104,45 @@ body {
 .about-list li {
     font-size: 18px;
     margin-bottom: 0;
+}
+
+.projects {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.projects-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+.project-item {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-item .project-preview {
+    width: 300px;
+    height: 150px;
+    border: 2px solid black;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.project-item p {
+    margin-top: 12px;
+}
+
+.project-item a {
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.project-item a:hover {
+    transform: scale(1.1);
+    color: green;
 }
 
 .contact {
@@ -170,7 +214,8 @@ body {
     }
 
     .about-description, 
-    .contact-description {
+    .contact-description,
+    .project-item {
         padding: 0 16px;
     }
 }
