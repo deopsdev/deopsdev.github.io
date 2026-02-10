@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Deops Dev</title>
+        <meta name="description" content="Deops Dev - HTML & CSS Developer" />
+        <meta property="og:title" content="Deops Dev" />
+        <meta property="og:description" content="Deops Dev - HTML & CSS Developer" />
+        <meta property="og:image" content="https://deopsdev.github.io/og-image.png" />
+        <meta property="og:url" content="https://deopsdev.github.io" />
+        <meta property="og:type" content="website" />
+        <link rel="icon" href="logo.svg" type="image/svg+xml">
+        
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+    <div id="scaler">
+        <div class="all-content">
+            <header>
+                <div class="header">
+                    <h1>Deops <br> Dev</h1>
+                    <nav class="nav">
+                        <a href="#about">About</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
+                </div>
+            </header>
+            <section id="about">
+                <div class="about">
+                    <h2 class="about-title">About</h2>
+                    <p class="about-description">
+                        "Hi, I'm Anjab, the creator of deops.dev. I am a HTML & CSS developer currently on the path to becoming a professional Front-End Developer."
+                    </p>
+                    <h3 class="skills">Skills</h3>
+                    <ul class="about-list">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="projects">
+                <div class="projects">
+                    <h2 class="projects-title">Projects</h2>
+                    <div class="project-item">
+                        <a href="https://komodoc-ai.vercel.app" target="_blank" class="project-link">
+                            <img src="comodocaiimage.png" alt="Comodoc AI Project Preview" class="project-preview">
+                        </a>
+                        <p><a href="https://komodoc-ai.vercel.app" target="_blank" class="project-link">Comodoc AI</a></p>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div id="contact" class="contact">
+                    <h2 class="contact-title">Contact</h2>
+                    <p class="contact-description">
+                        "I’m always interested in hearing about new projects and innovative ideas. Whether you have a specific question or just want to say hi, feel free to reach out!"
+                    </p>
+                    <ul class="contact-list">
+                        <li><a href="mailto:deops.dev@gmail.com">Email: deops.dev@gmail.com</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+        <script>
+            function scaleContent() {
+                const element = document.getElementById('scaler');
+                if (element) {
+                    const width = window.innerWidth;
+                    
+                    if (width <= 600) {
+                        element.style.transform = 'none';
+                        element.style.width = '100%'; 
+                        document.body.style.height = 'auto'; 
+                        return; 
+                    }
+
+                    element.style.width = '800px'; 
+                    const scale = width / 800;
+                    element.style.transform = `scale(${scale})`;
+                    document.body.style.height = (element.getBoundingClientRect().height) + 'px';
+                }
+            }
+
+            window.addEventListener('resize', scaleContent);
+            window.addEventListener('load', scaleContent);
+            scaleContent();
+
+            // Project link delay effect
+            document.querySelectorAll('.project-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const href = this.getAttribute('href');
+                    const target = this.getAttribute('target');
+                    
+                    setTimeout(() => {
+                        window.open(href, target || '_self');
+                    }, 500); // 500ms delay
+                });
+            });
+        </script>
+    </body>
+</html>
