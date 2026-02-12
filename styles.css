@@ -113,12 +113,20 @@ body {
 
 .projects-title {
     font-size: 24px;
-    margin-bottom: 24px;
+    margin-bottom: 48px;
+}
+
+.project-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .project-item {
-    max-width: 800px;
-    margin: 0 auto 48px;
+    margin-bottom: 24px;
 }
 
 .project-placeholder {
@@ -157,8 +165,9 @@ body {
 
 .project-item .project-preview:hover {
     border-color: transparent;
-    outline: 2px solid #004494;
+    outline: 2px solid #5a189a;
     outline-offset: 4px;
+    box-shadow: 0 0 20px rgba(90, 24, 154, 0.4);
 }
 
 .project-item p {
@@ -174,7 +183,7 @@ body {
 
 .project-item p a:hover {
     transform: scale(1.1);
-    color: green;
+    color: #5a189a;
 }
 
 .contact {
