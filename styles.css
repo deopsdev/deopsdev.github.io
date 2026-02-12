@@ -165,9 +165,9 @@ body {
 
 .project-item .project-preview:hover {
     border-color: transparent;
-    outline: 2px solid #5a189a;
+    outline: 2px solid #004494;
     outline-offset: 4px;
-    box-shadow: 0 0 20px rgba(90, 24, 154, 0.4);
+    box-shadow: 0 0 20px rgba(0, 68, 148, 0.4);
     transform: translateY(-5px);
 }
 
@@ -184,7 +184,7 @@ body {
 
 .project-item p a:hover {
     transform: scale(1.1);
-    color: #5a189a;
+    color: #004494;
 }
 
 .contact {
