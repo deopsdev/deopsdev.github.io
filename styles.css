@@ -118,7 +118,31 @@ body {
 
 .project-item {
     max-width: 800px;
+    margin: 0 auto 48px;
+}
+
+.project-placeholder {
+    width: 300px;
+    height: 150px;
+    background-color: #0a0a0a;
+    color: #00ff41;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    border: 2px solid black;
     margin: 0 auto;
+    transition: all 0.3s ease;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.project-placeholder:hover {
+    outline: 2px solid #00ff41;
+    outline-offset: 4px;
+    color: white;
 }
 
 .project-item .project-preview {
