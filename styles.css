@@ -30,6 +30,18 @@ body {
     margin-bottom: 0;
 }
 
+.brand {
+    white-space: nowrap;
+}
+.brand .second {
+    display: inline;
+}
+@media screen and (max-width: 600px) {
+    .brand .second {
+        display: block;
+    }
+}
+
 .nav {
     padding-top: 50px;
     font-size: 24px;

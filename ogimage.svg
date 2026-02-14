@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f7fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c3cfe2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="240" fill="url(#headerGrad)"/>
+  <text x="600" y="120" font-family="serif" font-size="80" font-weight="bold" text-anchor="middle" fill="black">Deops</text>
+  <text x="600" y="190" font-family="serif" font-size="80" font-weight="bold" text-anchor="middle" fill="black">Dev</text>
+
+  <!-- Nav buttons -->
+  <rect x="380" y="220" width="120" height="40" fill="#000000" />
+  <rect x="520" y="220" width="120" height="40" fill="#000000" />
+  <rect x="660" y="220" width="120" height="40" fill="#000000" />
+  <text x="440" y="248" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#ffffff">About</text>
+  <text x="580" y="248" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#ffffff">Projects</text>
+  <text x="720" y="248" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#ffffff">Contact</text>
+
+  <!-- Projects section title -->
+  <text x="600" y="320" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#000000">Projects</text>
+
+  <!-- Komo AI card -->
+  <text x="600" y="360" font-family="Arial, sans-serif" font-size="22" text-anchor="middle" fill="#000000">Komo AI</text>
+  <rect x="300" y="380" width="600" height="300" fill="none" stroke="#000000" stroke-width="2"/>
+  <rect x="312" y="392" width="576" height="276" fill="#ffffff"/>
+  <!-- Simulated iframe content -->
+  <rect x="312" y="392" width="576" height="60" fill="#eeeeee"/>
+  <text x="600" y="430" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#333333">komoai.vercel.app</text>
+  <rect x="330" y="470" width="540" height="180" fill="#dddddd"/>
+  <text x="600" y="560" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#666666">Privacy-first AI with PII redaction (preview)</text>
+</svg>
