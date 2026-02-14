@@ -1,59 +1,41 @@
 <!DOCTYPE html>
-<!-- 
-  index.html - Halaman Portfolio Utama Deops Dev.
-  File ini berisi struktur dasar dari website portfolio, termasuk bagian tentang saya, daftar proyek, dan kontak.
--->
-<html lang="id">
+<html lang="en">
     <head>
-        <meta charset="UTF-8" /> <!-- Mengatur pengkodean karakter agar simbol terbaca dengan benar -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Mengatur agar tampilan responsif di perangkat mobile -->
+        <meta charset="UTF-8" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
         <title>Deops Dev - Portfolio</title>
         
-        <!-- METADATA UNTUK SEO & MEDIA SOSIAL -->
-        <!-- Deskripsi singkat yang muncul di mesin pencari Google -->
-        <meta name="description" content="Deops Dev - Pengembang HTML & CSS" />
-        <!-- Judul saat link website dibagikan di media sosial -->
+        <meta name="description" content="Deops Dev - HTML & CSS Developer" />
         <meta property="og:title" content="Deops Dev" />
-        <meta property="og:description" content="Deops Dev - Pengembang HTML & CSS" />
-        <!-- Gambar pratinjau saat link dibagikan -->
-        <meta property="og:image" content="https://deopsdev.github.io/og-image.png" />
+        <meta property="og:description" content="Deops Dev - HTML & CSS Developer" />
         <meta property="og:url" content="https://deopsdev.github.io" />
         <meta property="og:type" content="website" />
         
-        <!-- FAVICON (Logo Kecil di Tab Browser) -->
-        <!-- Menggunakan format gambar vektor SVG agar tetap tajam di semua ukuran -->
         <link rel="icon" href="logo.svg" type="image/svg+xml">
         
-        <!-- MENGHUBUNGKAN FILE CSS UTAMA -->
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-    <!-- KONTAINER SKALA OTOMATIS (Scaler) -->
-    <!-- Elemen ini digunakan oleh JavaScript untuk memperbesar/memperkecil seluruh tampilan agar pas dengan lebar layar -->
     <div id="scaler">
         <div class="all-content">
-            <!-- BAGIAN HEADER (Kepala Halaman) -->
-            <!-- Berisi Nama Brand dan menu navigasi -->
             <header>
                 <div class="header">
                     <h1>Deops <br> Dev</h1>
                     <nav class="nav">
-                        <a href="#about">Tentang</a>
-                        <a href="#projects">Proyek</a>
-                        <a href="#contact">Kontak</a>
+                        <a href="#about">About</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact</a>
                     </nav>
                 </div>
             </header>
 
-            <!-- BAGIAN: TENTANG SAYA (About) -->
             <section id="about">
                 <div class="about">
-                    <h2 class="about-title">Tentang</h2>
+                    <h2 class="about-title">About</h2>
                     <p class="about-description">
-                        "Halo, saya Anjab, pencipta deops.dev. Saya adalah pengembang HTML & CSS yang sedang dalam perjalanan menjadi Pengembang Front-End profesional."
+                        "Hello, I'm Anjab, the creator of deops.dev. I am an HTML & CSS developer on my journey to becoming a professional Front-End Developer."
                     </p>
-                    <h3 class="skills">Keahlian</h3>
-                    <!-- Daftar keahlian yang dimiliki -->
+                    <h3 class="skills">Skills</h3>
                     <ul class="about-list">
                         <li>HTML</li>
                         <li>CSS</li>
@@ -61,38 +43,29 @@
                 </div>
             </section>
 
-            <!-- BAGIAN: DAFTAR PROYEK (Projects) -->
             <section id="projects">
                 <div class="projects">
-                    <h2 class="projects-title">Proyek</h2>
-                    <!-- Kotak grid untuk menampilkan daftar proyek-proyek -->
+                    <h2 class="projects-title">Projects</h2>
                     <div class="project-grid">
-                        <!-- ITEM PROYEK: Komodoc AI -->
                         <div class="project-item">
-                            <!-- Link yang akan terbuka saat diklik -->
                             <a href="https://komodoc-ai.vercel.app" target="_blank" class="project-link">
                                 <div class="iframe-container">
-                                    <!-- PREVIEW INTERAKTIF -->
-                                    <!-- Menggunakan iframe untuk menampilkan tampilan website proyek secara langsung di dalam portfolio -->
                                     <iframe src="https://komodoc-ai.vercel.app" title="Komodoc AI Project Preview" class="project-iframe"></iframe>
                                 </div>
                             </a>
-                            <!-- Judul Proyek di bawah gambar preview -->
                             <p><a href="https://komodoc-ai.vercel.app" target="_blank" class="project-link">Komodoc AI</a></p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- BAGIAN FOOTER (Informasi Kontak) -->
             <footer>
                 <div id="contact" class="contact">
-                    <h2 class="contact-title">Kontak</h2>
+                    <h2 class="contact-title">Contact</h2>
                     <p class="contact-description">
-                        "Saya selalu tertarik mendengar tentang proyek baru dan ide-ide inovatif. Jangan ragu untuk menghubungi saya!"
+                        "I'm always interested in hearing about new projects and innovative ideas. Don't hesitate to reach out!"
                     </p>
                     <ul class="contact-list">
-                        <!-- Link untuk mengirim email secara otomatis -->
                         <li><a href="mailto:deops.dev@gmail.com">Email: deops.dev@gmail.com</a></li>
                     </ul>
                 </div>
@@ -100,54 +73,37 @@
         </div>
     </div>
 
-    <!-- LOGIKA JAVASCRIPT INTERNAL -->
     <script>
-        /**
-         * scaleContent - Fungsi cerdas untuk menyesuaikan ukuran konten.
-         * Tujuannya: Agar tampilan portfolio terlihat sama persis di semua ukuran layar desktop (efek zoom).
-         */
         function scaleContent() {
             const element = document.getElementById('scaler');
             if (element) {
-                const width = window.innerWidth; // Mengambil lebar jendela browser saat ini
+                const width = window.innerWidth; 
                 
-                // Jika dibuka di HP (lebar layar <= 600px), matikan fitur skala otomatis
                 if (width <= 600) {
-                    element.style.transform = 'none'; // Matikan efek zoom
-                    element.style.width = '100%'; // Lebar penuh
-                    document.body.style.height = 'auto'; // Tinggi otomatis mengikuti konten
+                    element.style.transform = 'none'; 
+                    element.style.width = '100%'; 
+                    document.body.style.height = 'auto'; 
                     return; 
                 }
 
-                // Untuk layar desktop, kunci lebar dasar di 800px
                 element.style.width = '800px'; 
-                // Hitung rasio pembesaran: (Lebar Browser / 800px)
                 const scale = width / 800;
-                // Terapkan efek pembesaran (Zoom) menggunakan CSS Transform
                 element.style.transform = `scale(${scale})`;
                 
-                // Menyesuaikan tinggi body agar scrollbar muncul dengan benar setelah di-zoom
                 document.body.style.height = (element.getBoundingClientRect().height) + 'px';
             }
         }
 
-        // Jalankan fungsi skala otomatis saat jendela browser diubah ukurannya (Resize)
         window.addEventListener('resize', scaleContent);
-        // Jalankan fungsi skala otomatis saat halaman pertama kali dimuat (Load)
         window.addEventListener('load', scaleContent);
-        scaleContent(); // Jalankan sekali saat script dibaca
+        scaleContent(); 
 
-        /**
-         * EFEK DELAY KLIK (Click Transition)
-         * Memberikan jeda waktu 500ms saat link proyek diklik agar terasa lebih halus/berwibawa.
-         */
         document.querySelectorAll('.project-link').forEach(link => {
             link.addEventListener('click', function(e) {
-                e.preventDefault(); // Batalkan aksi buka link secara instan
-                const href = this.getAttribute('href'); // Ambil alamat link-nya
-                const target = this.getAttribute('target'); // Ambil targetnya (misal: _blank)
+                e.preventDefault(); 
+                const href = this.getAttribute('href'); 
+                const target = this.getAttribute('target'); 
                 
-                // Berikan jeda setengah detik (500ms) sebelum membuka halaman baru
                 setTimeout(() => {
                     window.open(href, target || '_self');
                 }, 500);

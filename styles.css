@@ -1,336 +1,210 @@
-/* 
- * styles.css - Desain Portfolio Deops Dev
- * Fokus pada keterbacaan, estetika bersih, dan responsivitas skala.
- */
-
 html {
-    /* Membuat efek pergerakan layar yang mulus saat menekan link navigasi (Anchor Scroll) */
     scroll-behavior: smooth; 
 }
 
 body {
-    /* Menghilangkan jarak luar bawaan browser agar konten benar-benar bersih di pinggir */
     margin: 0;
-    /* Menghilangkan jarak dalam bawaan browser */
     padding: 0;
-    /* Mencegah munculnya scrollbar horizontal (ke samping) jika ada elemen yang meluap */
     overflow-x: hidden; 
 }
 
-/* 
- * Kontainer Skala (Scaler) 
- * Digunakan oleh fungsi JavaScript di index.html untuk menyesuaikan ukuran seluruh konten.
- * Tujuannya agar tampilan tetap proporsional di layar desktop yang sangat lebar.
- */
 #scaler {
-    /* Menetapkan lebar dasar konten sebesar 800px sebagai standar desain */
     width: 800px;
-    /* Menentukan titik pusat perubahan ukuran (zoom) dimulai dari pojok kiri atas */
     transform-origin: top left;
 }
 
 .all-content {
-    /* Memberikan jarak kosong di bagian paling bawah halaman agar tidak terlalu mepet ke tepi browser */
     padding-bottom: 50px;
 }
 
-/* Header & Navigasi */
 .header {
-    /* Memberikan jarak 74px antara header dengan bagian About di bawahnya */
     margin-bottom: 74px;
-    /* Ukuran teks di dalam header dibuat besar (32px) agar menonjol */
     font-size: 32px;
-    /* Mengatur semua teks di dalam header agar berada di posisi tengah */
     text-align: center;
-    /* Memberikan latar belakang warna gradasi biru-perak yang elegan dari pojok kiri atas ke kanan bawah */
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    /* Memberikan ruang kosong di dalam header (24px) agar teks tidak menempel ke tepi gradasi */
     padding: 24px;
-    /* Memberikan ruang ekstra di bagian bawah header untuk estetika */
     padding-bottom: 74px;
 }
 
 .header h1 {
-    /* Menghilangkan jarak bawah pada judul agar tidak ada ruang kosong yang tidak perlu */
     margin-bottom: 0;
 }
 
 .nav {
-    /* Memberikan jarak 50px dari bagian atas header ke menu navigasi */
     padding-top: 50px;
-    /* Ukuran teks menu navigasi (24px) */
     font-size: 24px;
-    /* Menggunakan flexbox agar menu navigasi bisa disusun berjejer kesamping */
     display: flex;
-    /* Memposisikan menu navigasi tepat di tengah-tengah secara horizontal */
     justify-content: center;
-    /* Memberikan jarak 48px antar setiap link navigasi */
     gap: 48px;
 }
 
 .nav a {
-    /* Warna latar belakang tombol navigasi: Hitam */
     background-color: black;
-    /* Jarak dalam tombol: 12px atas-bawah, 24px kiri-kanan */
     padding: 12px 24px;
-    /* Menghilangkan garis bawah standar pada link */
     text-decoration: none;
-    /* Warna teks: Putih */
     color: white;
-    /* Memberikan garis tepi hitam 2px */
     border: 2px solid black;
-    /* Memberikan efek transisi halus (0.3 detik) saat warna berubah (hover) */
     transition: all 0.3s ease;
 }
 
-/* Efek saat kursor mouse berada di atas menu navigasi */
 .nav a:hover {
-    /* Membalik warna: Latar belakang menjadi putih */
     background-color: white;
-    /* Teks menjadi hitam */
     color: black;
-    /* Tetap menggunakan border hitam */
     border: 2px solid black;
 }
 
-/* Bagian Tentang Saya (About) */
 #about {
-    /* Memberikan jarak 48px dari atas saat layar di-scroll ke bagian ini agar tidak tertutup header */
     scroll-margin-top: 48px;
 }
 
 .about {
-    /* Mengatur teks bagian About agar berada di tengah */
     text-align: center;
-    /* Menyiapkan efek transisi untuk animasi perubahan ukuran (jika ada) */
     transition: transform 0.3s ease;
 }
 
 .about-title {
-    /* Ukuran font judul bagian (24px) */
     font-size: 24px;
 }
 
 .about-description {
-    /* Ukuran font deskripsi (18px) agar nyaman dibaca */
     font-size: 18px;
-    /* Membatasi lebar teks deskripsi maksimal 600px agar tidak terlalu meluas ke samping */
     max-width: 600px;
-    /* Memberikan jarak bawah 48px */
     margin-bottom: 48px;
-    /* Mengatur posisi deskripsi di tengah (menggunakan margin auto kiri-kanan) */
     margin-left: auto;
     margin-right: auto;
 }
 
 .about-list {
-    /* Memberikan garis tepi hitam 2px pada daftar keahlian */
     border: 2px solid black;
-    /* Menggunakan flexbox untuk menyusun daftar keahlian kesamping */
     display: flex;
-    /* Memposisikan daftar di tengah */
     justify-content: center;
-    /* Jarak antar poin keahlian (24px) */
     gap: 24px;
-    /* Jarak dalam kotak daftar keahlian */
     padding: 24px 48px;
-    /* Memposisikan kotak daftar tepat di tengah halaman */
     margin: 0 auto;
-    /* Lebar kotak menyesuaikan dengan isi di dalamnya */
     width: fit-content;
-    /* Menghilangkan simbol titik (bullet) bawaan daftar (li) */
     list-style-type: none;
 }
 
-/* Bagian Proyek (Projects) */
 #projects {
-    /* Jarak aman 48px saat scroll navigasi agar judul proyek tidak terpotong */
     scroll-margin-top: 48px;
 }
 
 .projects {
-    /* Memberikan jarak 100px dari bagian sebelumnya */
     margin-top: 100px;
-    /* Teks judul proyek di tengah */
     text-align: center;
 }
 
 .projects-title {
-    /* Ukuran font judul proyek (24px) */
     font-size: 24px;
-    /* Jarak bawah 48px */
     margin-bottom: 48px;
 }
 
 .project-grid {
-    /* Menggunakan flexbox untuk mengatur tata letak kartu proyek */
     display: flex;
-    /* Memposisikan kartu proyek di tengah */
     justify-content: center;
-    /* Jarak antar kartu proyek (40px) */
     gap: 40px;
-    /* Jika layar tidak cukup, kartu proyek akan turun ke baris baru */
     flex-wrap: wrap;
-    /* Lebar maksimal seluruh grid proyek adalah 1000px */
     max-width: 1000px;
-    /* Posisi grid di tengah halaman */
     margin: 0 auto;
 }
 
-/* Preview Proyek menggunakan Iframe (Miniatur Website) */
 .project-item .iframe-container {
-    /* Lebar miniatur: 300px */
     width: 300px;
-    /* Tinggi miniatur: 150px */
     height: 150px;
-    /* Garis tepi hitam tebal 2px */
     border: 2px solid black;
-    /* Menyembunyikan bagian website asli yang meluap dari kotak miniatur */
     overflow: hidden;
-    /* Diperlukan untuk pengaturan posisi elemen di dalamnya */
     position: relative;
-    /* Efek transisi halus (0.3 detik) */
     transition: all 0.3s ease;
 }
 
 .project-item .project-iframe {
-    /* Ukuran lebar asli website sebelum diperkecil (1200px) */
     width: 1200px; 
-    /* Ukuran tinggi asli website (600px) */
     height: 600px;
-    /* Menghilangkan border bawaan iframe */
     border: none;
-    /* Mengecilkan tampilan website sebesar 0.25 (1/4 ukuran asli) agar pas di kotak 300px */
     transform: scale(0.25); 
-    /* Titik pusat pengecilan dimulai dari pojok kiri atas */
     transform-origin: 0 0;
-    /* Mencegah user berinteraksi langsung dengan isi iframe (klik dilakukan via link pembungkus) */
     pointer-events: none; 
 }
 
-/* Efek saat kartu proyek diarahkan kursor (Hover) */
 .project-item .iframe-container:hover {
-    /* Memberikan garis luar warna biru saat di-hover */
     outline: 2px solid #004494;
-    /* Memberikan jarak antara border dengan outline (4px) */
     outline-offset: 4px;
-    /* Memberikan efek bayangan biru yang bercahaya (glow) */
     box-shadow: 0 0 20px rgba(0, 68, 148, 0.4);
-    /* Menggeser kartu sedikit ke atas (5px) untuk efek interaktif */
     transform: translateY(-5px);
 }
 
-/* Bagian Kontak (Contact) */
 .contact {
-    /* Memberikan jarak 100px dari bagian proyek */
     margin-top: 100px;
-    /* Teks di tengah */
     text-align: center;
-    /* Efek transisi halus */
     transition: transform 0.3s ease;
 }
 
 .contact-title {
-    /* Ukuran font judul kontak (24px) */
     font-size: 24px;
 }
 
 .contact-description {
-    /* Ukuran font deskripsi kontak (18px) */
     font-size: 18px;
-    /* Posisi di tengah */
     margin: 0 auto;
-    /* Lebar maksimal 600px */
     max-width: 600px;
 }
 
 .contact-list {
-    /* Mengatur daftar kontak agar tampil seperti balok di tengah */
     display: inline-block;
-    /* Teks di dalam daftar rata kiri */
     text-align: left;
-    /* Margin atas 48px, kiri-kanan otomatis agar di tengah */
     margin: 48px auto 0;
-    /* Menghilangkan titik (bullet) daftar */
     list-style-type: none;
-    /* Menghapus padding bawaan */
     padding: 0;
 }
 
 .contact-list li {
-    /* Memberikan jarak antar item kontak (bawah 15px) */
     margin-bottom: 15px;
 }
 
 .contact-list a {
-    /* Warna latar belakang tombol kontak: Hitam */
     background-color: black;
-    /* Jarak dalam tombol */
     padding: 12px 24px;
-    /* Menghilangkan garis bawah link */
     text-decoration: none;
-    /* Warna teks: Putih */
     color: white;
-    /* Garis tepi hitam 2px */
     border: 2px solid black;
-    /* Efek transisi warna latar belakang (0.3 detik) */
     transition: background-color 0.3s ease;
 }
 
-/* Efek Hover Tombol Kontak */
 .contact-list a:hover {
-    /* Berubah warna menjadi Biru Tua saat kursor di atasnya */
     background-color: #004494;
-    /* Border tetap hitam */
     border: 2px solid black;
 }
 
-/* RESPONSIVITAS MOBILE (Layar di bawah 600px) */
 @media screen and (max-width: 600px) {
     #scaler {
-        /* Di layar kecil, lebar scaler menjadi 100% (penuh) */
         width: 100%;
-        /* Maksimal lebar dibatasi 480px agar tidak terlalu lebar di tablet kecil */
         max-width: 480px;
-        /* Posisi di tengah */
         margin: 0 auto;
     }
 
     .nav {
-        /* Jarak antar menu navigasi dikurangi menjadi 20px */
         gap: 20px;
-        /* Susunan menu navigasi berubah menjadi vertikal (atas-bawah) */
         flex-direction: column;
-        /* Memposisikan menu tepat di tengah layar */
         align-items: center;
     }
 
     .about-list {
-        /* Daftar keahlian berubah menjadi vertikal */
         flex-direction: column;
-        /* Jarak antar keahlian dikurangi (12px) */
         gap: 12px;
-        /* Lebar penuh 100% */
         width: 100%;
-        /* Maksimal lebar 300px agar rapi */
         max-width: 300px;
-        /* Memastikan padding tidak merusak lebar total */
         box-sizing: border-box;
     }
 
     .header {
-        /* Mengurangi jarak bawah header di layar kecil */
         margin-bottom: 40px;
-        /* Mengurangi ruang kosong di bawah header */
         padding-bottom: 54px;
     }
 
     .contact {
-        /* Mengurangi jarak atas bagian kontak */
         margin-top: 50px;
     }
 
-    /* Memberikan ruang kosong (padding) 16px di kiri-kanan konten agar tidak menempel ke layar HP */
     .about-description, 
     .contact-description,
     .project-item {
